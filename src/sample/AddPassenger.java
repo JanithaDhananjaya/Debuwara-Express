@@ -47,8 +47,9 @@ public class AddPassenger {
 
     private Random random = new Random();
 
-    private List<CustomerBooking> customerBookingsList = new ArrayList<>();
-    private List<CustomerBooking> todayCustomerBookings = new ArrayList<>();
+    private static List<CustomerBooking> customerBookingsList = new ArrayList<>();
+    private static List<CustomerBooking> todayCustomerBookings = new ArrayList<>();
+    private List<CustomerBooking> boredBookings = new ArrayList<>();
     private static final PassengerQueue passengerQueue = new PassengerQueue();
 
     @FXML
@@ -56,7 +57,7 @@ public class AddPassenger {
         takePassengers();
     }
 
-    public void readBookingDetailsFile() {
+    public static void readBookingDetailsFile() {
         try {
             // create a reader
             Reader reader = Files.newBufferedReader(Paths.get("booking.json"));
@@ -75,7 +76,7 @@ public class AddPassenger {
         }
     }
 
-    public void filterBookings() {
+    public static void filterBookings() {
         SimpleDateFormat sdf = new SimpleDateFormat("YYYY-MM-dd");
         String today = sdf.format(new Date());
         for (CustomerBooking booking : customerBookingsList) {
@@ -111,7 +112,7 @@ public class AddPassenger {
         loadSeats();
     }
 
-    public PassengerQueue getPassengerQueue(){
+    public PassengerQueue getPassengerQueue() {
         return passengerQueue;
     }
 

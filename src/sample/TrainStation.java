@@ -80,23 +80,41 @@ public class TrainStation extends Application {
             for (int i = 0; i < 3; i++) {
                 number += random.nextInt(6) + 1;
             }
-            System.out.println("=================================");
-            System.out.println(number);
-            System.out.println("=================================");
             Passenger removedPassenger = passengerQueue.getPassengerList().remove(0);
             allTime += number;
             removedPassenger.setSecondsInQueue(allTime);
             boardedPassengers.add(removedPassenger);
         }
 
-        for (Passenger p : boardedPassengers) {
-            System.out.println("Individual Times for " + p.getName() + " : " + p.getSecondsInQueue());
-        }
+        displayReport(boardedPassengers);
 
     }
 
-    public void addPassenger() {
+    public void displayReport(List<Passenger> boardedPassengers){
+        Report report = new Report();
+        report.get(boardedPassengers);
 
+        Stage stage = new Stage();
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(getClass().getResource("report.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        stage.setTitle("Report");
+        stage.setScene(new Scene(root, 900, 600));
+        stage.show();
+
+        stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            public void handle(WindowEvent we) {
+                Platform.setImplicitExit(false);
+                stage.close();
+                printInstructions();
+            }
+        });
+    }
+
+    public void addPassenger() {
         Stage stage = new Stage();
         Parent root = null;
         try {

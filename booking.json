@@ -1,7 +1,7 @@
 [
   {
     "customerName": "Janitha",
-    "bookingDate": "2020-04-07",
+    "bookingDate": "2020-04-20",
     "route": "Colombo to Badulla",
     "seats": [
       "1"
@@ -9,7 +9,7 @@
   },
   {
     "customerName": "dadad",
-    "bookingDate": "2020-04-07",
+    "bookingDate": "2020-04-20",
     "route": "Colombo to Badulla",
     "seats": [
       "18"
@@ -17,7 +17,7 @@
   },
   {
     "customerName": "Uaml",
-    "bookingDate": "2020-04-07",
+    "bookingDate": "2020-04-20",
     "route": "Colombo to Badulla",
     "seats": [
       "14"
@@ -25,7 +25,7 @@
   },
   {
     "customerName": "Jehan",
-    "bookingDate": "2020-04-07",
+    "bookingDate": "2020-04-20",
     "route": "Colombo to Badulla",
     "seats": [
       "29"
@@ -33,7 +33,7 @@
   },
   {
     "customerName": "Kasun",
-    "bookingDate": "2020-04-06",
+    "bookingDate": "2020-04-19",
     "route": "Colombo to Badulla",
     "seats": [
       "16"
@@ -41,7 +41,7 @@
   },
   {
     "customerName": "Nirmala",
-    "bookingDate": "2020-04-07",
+    "bookingDate": "2020-04-20",
     "route": "Colombo to Badulla",
     "seats": [
       "2"
@@ -49,7 +49,7 @@
   },
   {
     "customerName": "Peta",
-    "bookingDate": "2020-04-07",
+    "bookingDate": "2020-04-20",
     "route": "Colombo to Badulla",
     "seats": [
       "9"
@@ -57,7 +57,7 @@
   },
   {
     "customerName": "Lakmal",
-    "bookingDate": "2020-04-07",
+    "bookingDate": "2020-04-20",
     "route": "Colombo to Badulla",
     "seats": [
       "11"

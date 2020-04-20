@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Report">
+   <children>
+      <TableView fx:id="tbl_passenger" layoutY="67.0" prefHeight="200.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="col_name" prefWidth="304.0" text="Name" />
+          <TableColumn fx:id="col_avg_time" minWidth="0.0" prefWidth="295.0" text="Average Time" />
+        </columns>
+      </TableView>
+      <Label fx:id="lbl_max_wait_time" layoutX="39.0" layoutY="289.0" text="Maximum Waiting Time">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_min_wait_time" layoutX="39.0" layoutY="338.0" text="Minimum Waiting Time">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_max_waiting_time" editable="false" layoutX="300.0" layoutY="287.0" prefHeight="27.0" prefWidth="245.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt_min_waiting_time" editable="false" layoutX="300.0" layoutY="334.0" prefHeight="27.0" prefWidth="245.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

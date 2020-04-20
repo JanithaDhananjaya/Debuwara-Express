@@ -1,9 +1,9 @@
 package sample.model;
 
-public class Passenger {
+public class Passenger implements Comparable<Passenger> {
     private String firstName;
     private String surName;
-    private int secondsInQueue;
+    private double secondsInQueue;
     private int seatNo;
 
     public String getName() {
@@ -23,7 +23,7 @@ public class Passenger {
         this.seatNo = seatNo;
     }
 
-    public int getSecondsInQueue() {
+    public double getSecondsInQueue() {
         return secondsInQueue;
     }
 
@@ -31,9 +31,7 @@ public class Passenger {
         this.secondsInQueue = secondsInQueue;
     }
 
-    public void display(){
-
-    }
+    public void display(){}
 
     @Override
     public String toString() {
@@ -43,5 +41,10 @@ public class Passenger {
                 ", secondsInQueue=" + secondsInQueue +
                 ", seatNo=" + seatNo +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Passenger o) {
+        return this.secondsInQueue > o.getSecondsInQueue() ? 1 : 0;
     }
 }
